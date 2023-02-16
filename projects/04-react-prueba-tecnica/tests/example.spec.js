@@ -34,7 +34,5 @@ test('click on button "Generate new Fact" and verify text changes', async ({
   const newText = await page.getByRole('paragraph')
   const newTextContent = await newText.textContent()
 
-  console.log({ textContent, newTextContent })
-
   await expect(textContent != newTextContent).toBeTruthy()
 })
